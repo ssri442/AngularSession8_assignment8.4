@@ -5,11 +5,13 @@
     <div class="form-group">
         <label for="firstname" class="sr-only">Firstname</label>
         <input type="text" 
-          [value]="firstname" (input) = "firstname = $event.target.value">
+        class="form-control" placeholder="Firstname"
+        [(ngModel)]="firstname">
         </div>
         <div class="form-group">
-        <label for="lastname"  class="sr-only">Lastname</label>
-        <input type="text"   [value]="lastname" (input) = "lastname = $event.target.value">
+        <label for="lastname" class="sr-only">Lastname</label>
+        <input type="text"  class="form-control"
+        placeholder="Lastname" [(ngModel)]="lastname">
         </div>
         <button (click) ="Click()" class="btn btn-primary">Login </button>
   
