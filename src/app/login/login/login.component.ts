@@ -9,14 +9,19 @@ import { Component, ViewEncapsulation,OnInit } from '@angular/core';
   
 })
 export class LoginComponent implements OnInit {
+firstname : string;
+lastname : string;
 title : string;
-name : string;
   constructor() { }
 
   ngOnInit() {
-    this.title ='Login with your credentials';
-    this.name = 'Hi Sai';
+    this.firstname =' Sai';
+    this.lastname= ' Sri';
+    this.title ='login with your cred';
 
   }
-
+Click(){
+  this.title ="hi"+ this.firstname + this.lastname;
+  
+}
 }
