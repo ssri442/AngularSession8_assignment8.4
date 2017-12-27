@@ -1,16 +1,5 @@
-
-#login .formcontrol {
-
-    font-size: 14px;  
+h2{
+    color: blue;
 }
 
-
-#login .btn.btn-primary {
-    font-size: 13px;
-    text-align: center;
-    margin-top: 20px;
-    display: block;
-    min-width:500px
-    
-}
 
