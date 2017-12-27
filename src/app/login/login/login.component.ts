@@ -21,7 +21,7 @@ title : string;
 
   }
 Click(){
-  this.title ="hi"+ this.firstname + this.lastname;
+  this.title ="hi"+" " + this.firstname +" "+ this.lastname;
   
 }
 }
