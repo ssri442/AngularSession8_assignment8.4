@@ -1,0 +1,13 @@
+<table style="width:50%" align ="center">
+    <tr>
+       <th>Name</th>
+       <th>Age</th> 
+       <th>ArrayIndex</th>
+     </tr>
+     
+     <tr *ngFor="let rows of row; let i = index">
+       <td>{{rows.Name}}</td>
+       <td>{{rows.Age}}</td>
+       <td> {{ i }} </td>
+      </tr>
+     </table>
