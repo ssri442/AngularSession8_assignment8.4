@@ -4,24 +4,26 @@ import { Component, ViewEncapsulation,OnInit } from '@angular/core';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  encapsulation: ViewEncapsulation.Native
-
   
 })
 export class LoginComponent implements OnInit {
 firstname : string;
 lastname : string;
 title : string;
+show:boolean = false;
+
   constructor() { }
 
   ngOnInit() {
     this.firstname =' Sai';
     this.lastname= ' Sri';
     this.title ='login with your cred';
+    
 
   }
 Click(){
-  this.title ="hi"+" " + this.firstname +" "+ this.lastname;
+  this.show = true;
+  this.title ="Hello"+" " + this.firstname +" "+ this.lastname;
   
 }
 }
