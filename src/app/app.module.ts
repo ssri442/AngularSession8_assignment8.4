@@ -6,13 +6,15 @@ import { RootComponent } from './app.component';
 import { LoginComponent } from './login/login/login.component';
 import { ChildComponent } from './login/login/child/child.component';
 import { TableComponent } from './table/table.component';
+import { HoverDirective } from './table/hover.directive';
 
 @NgModule({
   declarations: [
     RootComponent,
     LoginComponent,
     ChildComponent,
-    TableComponent
+    TableComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,

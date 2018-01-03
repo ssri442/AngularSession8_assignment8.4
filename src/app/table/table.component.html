@@ -5,9 +5,13 @@
        <th>ArrayIndex</th>
      </tr>
      
-     <tr *ngFor="let rows of row; let i = index">
+    
+     
+    <tr *ngFor="let rows of row; let i = index"> 
        <td>{{rows.Name}}</td>
        <td>{{rows.Age}}</td>
-       <td> {{ i }} </td>
+       <td appHover> {{ i+1 }} </td>
       </tr>
      </table>
+
+     

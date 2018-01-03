@@ -8,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TableComponent  {
 
   row : Object[];
-  count=-1;
-
-  constructor() {
+   constructor() {
    this.row= [ {Name:"John",Age:"30"},{Name:"Tom",Age:"40"},{Name:"Pip",Age:"50"}];
 
    }
