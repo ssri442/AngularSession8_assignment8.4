@@ -1,27 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { FirstService } from '../../service/firstservice.service';
+import { DropdownService } from '../../service/dropdown.service';
 
 @Component({
   selector: 'app-arraylist',
   templateUrl: './arraylist.component.html',
   styleUrls: ['./arraylist.component.css'],
-  
+  providers:[FirstService]
 })
 export class ArraylistComponent {
-  title: string;
+ title ="Hi am form created by using services"
   name: string;
   lastName: string;
   arrayList: any[] = [];
+  genderArray: any[] = [];
 
-  constructor(private _firstService: FirstService) { }
+  constructor(private _firstService: FirstService,private _dropDownService: DropdownService) { }
 
-  ngOnInit() { }
+  ngOnInit() {this.genderArray = this._dropDownService.getDropDown() }
 
-// declaring submit function 
-  submit(Name: string, LastName: string) {
+// defining submit function 
+  submit(Name: string, LastName: string,Gender: string) {
     let model = {
       firstName: Name,
-      lastName: LastName
+      lastName: LastName,
+      gender: Gender
     }
     this._firstService.addGroup(model);
     this.arrayList = this._firstService.getList();

@@ -9,6 +9,7 @@ import { TableComponent } from './table/table.component';
 import { HoverDirective } from './table/hover.directive';
 import { ArraylistComponent } from './arraylist/arraylist/arraylist.component';
 import { FirstService } from './service/firstservice.service';
+import { DropdownService } from './service/dropdown.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { FirstService } from './service/firstservice.service';
     HttpModule
 
   ],
-  providers: [FirstService],
+  providers: [DropdownService],
   bootstrap: [RootComponent]
 })
 export class AppModule { }

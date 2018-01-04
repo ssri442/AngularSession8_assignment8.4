@@ -1,4 +1,4 @@
-
+<h1>{{title}}</h1>
 <div class="form-group">
   <div class="col-sm-10">
     <div class="form-group">
@@ -7,7 +7,15 @@
     <div class="form-group">
    <input type="text" name="lastName" class="form-control" placeholder="Lastname" [(ngModel)]="lastName" #LastName>
     </div>
-    <button type="button" class="btn btn-default" (click)="submit(firstName,lastName)">Submit</button>
+    <div class="form-group">
+      <select class="txt-box" name="gender" [(ngModel)]="genderType" class="form-control" #refGender>
+          <option [value]="playerTypes" [disabled]="true">Select Option </option>
+            <option *ngFor="let gender of genderArray" [ngValue]="gender.value">
+            {{gender.value}}
+            </option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-default" (click)="submit(firstName,lastName,genderType)">Submit</button>
 
     <hr/>
     <div *ngIf="arrayList.length > 0">
@@ -17,13 +25,18 @@
             <tr>
               <th>Name</th>
               <th>LastName</th>
+              <th>Gender</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let item of arrayList">
+            <tr *ngFor="let item of arrayList"> 
               <td>{{item.firstName}}</td>
               <td>{{item.lastName}}</td>
+              <td>{{item.gender}}</td>
             </tr>
           </tbody>
         </table>
+      </div>
+      </div>
+      </div>
       </div>
