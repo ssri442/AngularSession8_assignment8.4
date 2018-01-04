@@ -10,6 +10,8 @@ import { HoverDirective } from './table/hover.directive';
 import { ArraylistComponent } from './arraylist/arraylist/arraylist.component';
 import { FirstService } from './service/firstservice.service';
 import { DropdownService } from './service/dropdown.service';
+import {LoggingService} from './service/logging.service';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { DropdownService } from './service/dropdown.service';
     HttpModule
 
   ],
-  providers: [DropdownService],
+  providers: [DropdownService,LoggingService],
   bootstrap: [RootComponent]
 })
 export class AppModule { }
