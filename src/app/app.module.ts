@@ -25,7 +25,7 @@ import { FirstService } from './service/firstservice.service';
     HttpModule
 
   ],
-  providers: [],
+  providers: [FirstService],
   bootstrap: [RootComponent]
 })
 export class AppModule { }

@@ -5,7 +5,7 @@ import { FirstService } from '../../service/firstservice.service';
   selector: 'app-arraylist',
   templateUrl: './arraylist.component.html',
   styleUrls: ['./arraylist.component.css'],
-  providers: [FirstService]
+  
 })
 export class ArraylistComponent {
   title: string;
