@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login/login.component';
 import { ChildComponent } from './login/login/child/child.component';
 import { TableComponent } from './table/table.component';
 import { HoverDirective } from './table/hover.directive';
+import { ArraylistComponent } from './arraylist/arraylist/arraylist.component';
+import { FirstService } from './service/firstservice.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { HoverDirective } from './table/hover.directive';
     LoginComponent,
     ChildComponent,
     TableComponent,
-    HoverDirective
+    HoverDirective,
+    ArraylistComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,7 @@ import { HoverDirective } from './table/hover.directive';
     HttpModule
 
   ],
-  providers: [],
+  providers: [FirstService],
   bootstrap: [RootComponent]
 })
 export class AppModule { }
